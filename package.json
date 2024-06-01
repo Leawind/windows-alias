@@ -1,0 +1,40 @@
+{
+	"name": "windows-alias",
+	"version": "1.1.1",
+	"description": "Command alias on Windows",
+	"main": "dist/index.js",
+	"type": "commonjs",
+	"bin": {
+		"windows-alias": "dist/bin/windows-alias.js"
+	},
+	"scripts": {
+		"dev": "tsc -w",
+		"clean": "rimraf dist",
+		"build": "tsc",
+		"rebuild": "run-s clean build",
+		"start": "node dist/bin/windows-alias.js"
+	},
+	"files": [
+		"dist/",
+		"README.zh.md"
+	],
+	"author": "Leawind",
+	"license": "MIT",
+	"keywords": [
+		"windows",
+		"ailas",
+		"command"
+	],
+	"os": [
+		"win32"
+	],
+	"devDependencies": {
+		"@types/node": "^v18"
+	},
+	"dependencies": {
+		"commander": "^11.1.0",
+		"npm-run-all": "^4.1.5",
+		"rimraf": "^5.0.7",
+		"typescript": "^5.3.2"
+	}
+}
